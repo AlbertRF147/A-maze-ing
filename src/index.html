@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 </head>
+
 <body>
-	<div id="maze" class="maze"></div>
+	<div class="container">
+		<div class="controls">
+			<div>
+				<button id="new">New Maze</button>
+			</div>
+			<div>
+				<label for="solution">Show Solution</label>
+				<input id="solution" type="checkbox">
+			</div>
+			<div>
+				<label for="background">Hide Background</label>
+				<input id="background" type="checkbox">
+			</div>
+		</div>
+		<div id="maze" class="maze">
+			<div class="background"></div>
+		</div>
+	</div>
 </body>
+
 </html>

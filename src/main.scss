@@ -1,15 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+	font-family: 'Montserrat';
+}
+
 body {
   margin: 0;
+}
+
+.container {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.controls {
+	width: 100%;
+	line-height: 30px;
+	text-align: center;
+	margin: 12px 0;
+}
+
+.controls div {
+	display: inline-block;
+	margin: 0 16px;
+}
+
+.controls button {
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.controls input[type=checkbox] {
+	cursor: pointer;
 }
 
 .maze {
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
-  border: 1px solid;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+}
+
+.background {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url("https://previews.123rf.com/images/tianatena/tianatena1707/tianatena170700051/81759722-chinese-dragon-seamless-pattern-traditional-symbol-of-dragon-watercolor-hand-painted-illustration-.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	opacity: .4;
+	z-index: -1;
 }
 
 .cell {
@@ -19,4 +58,24 @@ body {
   border: 1px solid;
   width: 40px;
   height: 40px;
+}
+
+.no-wall-north {
+	border-top: 0;
+}
+
+.no-wall-east {
+	border-right: 0;
+}
+
+.no-wall-south {
+	border-bottom: 0;
+}
+
+.no-wall-west {
+	border-left: 0;
+}
+
+.shown {
+	background: red;
 }
